@@ -4,6 +4,8 @@ import (
 	"bytes"
 	"compress/gzip"
 	"io"
+	"log"
+	"time"
 )
 
 func Panic(err error) {
@@ -39,4 +41,12 @@ func DecodeGzip(data []byte) ([]byte, error) {
 		return nil, err
 	}
 	return buf.Bytes(), nil
+}
+
+func CalcFuncCostTime(logKey string, f func()) {
+	timeBegin := time.Now()
+	defer func() {
+		log.Printf("calcFuncCostTime processed, logKey: %s, cost time: %s", logKey, time.Since(timeBegin).String())
+	}()
+	f()
 }

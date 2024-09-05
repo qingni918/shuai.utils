@@ -6,10 +6,12 @@ import (
 )
 
 func TestPanic(t *testing.T) {
-	var err error
-	Panic(err)
-	err = fmt.Errorf("err")
-	Panic(err)
+	CalcFuncCostTime("testPanic", func() {
+		var err error
+		Panic(err)
+		err = fmt.Errorf("err")
+		Panic(err)
+	})
 }
 
 func TestEncodeGzip(t *testing.T) {
