@@ -1,3 +1,3 @@
-module shuai_utils
+module utils
 
 go 1.22.0
