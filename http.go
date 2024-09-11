@@ -1,4 +1,4 @@
-package shuai_utils
+package utils
 
 import (
 	"compress/gzip"

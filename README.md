@@ -1,2 +1,2 @@
-# shuai.utils
+# utils
 便捷处理函数
