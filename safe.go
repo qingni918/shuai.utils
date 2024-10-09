@@ -2,10 +2,10 @@ package utils
 
 import (
 	"fmt"
+	"github.com/qingni918/utils/zaplogger"
 	"go.uber.org/zap"
 	"os"
 	"runtime"
-	"utils/zaplogger"
 )
 
 type SafeGoroutineFunc func()
